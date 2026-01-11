@@ -297,73 +297,110 @@ h1, h2, h3 {
     border-left: 4px solid var(--navy); 
 }
 
-/* Regional Coverage Styling */
-
-.regions-section {
-    padding: 100px 0;
-    background: #fff;
+/* Certifications Section with 3D Carousel */
+.certificates-section {
+  background: #f6f8fb;
+  padding: 80px 0;
 }
 
+.cert-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cert-img {
+  max-width: 820px;
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Arrow visibility */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .cert-img {
+    height: 300px;
+    padding: 20px;
+  }
+}
+
+
+/* Regional Coverage Styling */
+
+.regions-section .section-label {
+  margin-top: 1.5rem;
+}
+
+.regions-section {
+    padding: 80px 0;
+    background-color: var(--light-blue);
+}
 .regions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
-    width: 100%;
+  display: grid;
+  /* Automatically fits as many cards as possible, minimum 280px wide */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 2rem;
+  width: 100%;
+  margin-top: 3rem;
 }
 
 .region-card {
-    text-align: center;
-    padding: 40px 20px;
-    border: 1px solid #f0f0f0;
-    border-radius: 15px;
-    transition: all 0.4s ease;
-    background: #ffffff;
-
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .region-card:hover {
-    border-color: var(--red);
-    box-shadow: 0 10px 30px rgba(11, 31, 59, 0.08);
-    transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--highlight-color); /* Use your theme color here */
 }
 
-
-
 .flag-wrapper {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 25px;
-    overflow: hidden;
-    border-radius: 50%; 
-    border: 4px solid var(--light-blue);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 80px;
+  height: 50px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .flag-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .region-card h3 {
-    color: var(--navy);
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: #333;
 }
 
-.region-card .city {
-    color: var(--red);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-.region-card p {
-    color: #666;
-    font-size: 0.95rem;
+.city {
+  font-weight: 700;
+  color: var(--highlight-color); /* Matches your "Operational Reach" text */
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Why Choose Us Styling */
@@ -581,6 +618,42 @@ input:focus, select:focus, textarea:focus {
     display: inline-block;
 
 }
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4; /* Light background for the circle */
+  color: #333; /* Icon color */
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+/* Premium Hover Effects */
+.social-links a:hover {
+  transform: translateY(-5px);
+  background-color: var(--highlight-color); /* Your theme color */
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--highlight-color);
+}
+
+/* Specific Brand Colors on Hover (Optional) */
+.social-links a:hover .fa-facebook { color: #fff; }
+.social-links a:hover .fa-whatsapp { background-color: #25D366; border-color: #25D366; }
+.social-links a:hover .fa-tiktok { background-color: #000; border-color: #000; }
 
 /* Bottom Bar */
 .footer-bottom {
