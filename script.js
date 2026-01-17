@@ -1,10 +1,9 @@
 /***********************
  * 1. EMAILJS INITIALIZATION
- * (Must be at the top)
  ***********************/
 (function () {
     emailjs.init({
-        publicKey: "SMFg2ZfoYmbpXneca",
+        publicKey: "GzIB4IFjPsoHw74Zy",
     });
 })();
 
@@ -126,8 +125,8 @@ if (form) {
         submitBtn.disabled = true;
 
         emailjs.sendForm(
-            'service_17d36lz', 
-            'template_4kz4o5c', 
+            'service_6cbeovi', 
+            'template_jy5vhij', 
             this
         ).then(() => {
             alert('Thank you! Your application has been sent successfully.');

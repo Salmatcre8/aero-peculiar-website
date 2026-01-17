@@ -346,7 +346,6 @@ h1, h2, h3 {
 }
 .regions-grid {
   display: grid;
-  /* Automatically fits as many cards as possible, minimum 280px wide */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
   gap: 2rem;
   width: 100%;
