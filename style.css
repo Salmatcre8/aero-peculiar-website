@@ -395,7 +395,7 @@ h1, h2, h3 {
 
 .city {
   font-weight: 700;
-  color: var(--highlight-color); /* Matches your "Operational Reach" text */
+  color: var(--highlight-color);
   font-size: 0.9rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
